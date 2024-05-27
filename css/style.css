@@ -1,0 +1,438 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* base */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* nav */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid #6f6f6f;
+}
+nav h1 {
+  color: #717171;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 40px;
+}
+nav .onglets {
+  margin: 3px 0 0 300px;
+}
+nav .onglets a {
+  text-decoration: none;
+  color: #000;
+  margin-right: 10px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  nav {
+    display: block;
+    text-align: center;
+  }
+  nav .onglets {
+    margin: 0 0 20px 0;
+  }
+}
+
+/* header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../img/background-header.jpeg");
+  background-size: cover;
+  color: #fff;
+  padding: 40px;
+}
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 70px;
+}
+.header h4 {
+  margin-top: -20px;
+  font-size: 30px;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+.header button {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* main */
+main {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .content .card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+main .content .card .left {
+  flex: 0 0 30%;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+}
+main .content .card .left h1 {
+  font-size: 44px;
+  margin-bottom: 0;
+}
+main .content .card .left p {
+  font-size: 28px;
+}
+main .content .card.right {
+  flex: 0 0 70%;
+}
+main .content .card .right img {
+  height: 300px;
+  width: 400px;
+  margin-top: 5px;
+}
+@media only screen and (max-width: 768px) {
+  main .content .card {
+    display: block;
+    margin-bottom: 50px;
+    padding: -10px 0;
+  }
+  main .content .card .left {
+    flex: 0 0 100%;
+    margin: 0 15px;
+  }
+  main .content .card .left p {
+    font-size: 1.3em;
+  }
+  main .content .card.right {
+    flex: 0 0 100%;
+  }
+  main .content .card .right img {
+    margin-top: 0px;
+  }
+}
+
+/* footer */
+footer {
+  margin-top: 40px;
+  border-top: 5px solid #6f6f6f;
+  background-color: #000;
+  color: #fff;
+  padding: 30px 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .footer-title {
+  flex: 0 0 100%;
+}
+footer h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 50px;
+  border-bottom: 1px solid #fff;
+  width: 20%;
+  padding-bottom: 5px;
+}
+footer .services {
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 0 0 30%;
+}
+footer .services .service {
+  margin-right: 30px;
+  padding: 10px;
+}
+footer .services .service h3 {
+  font-size: 30px;
+}
+footer .services .service p {
+  font-size: 20px;
+}
+footer #contact {
+  color: rgb(181, 181, 181);
+  font-size: 1.3em;
+}
+footer .services .service p {
+  max-width: 300px;
+}
+@media only screen and (max-width: 768px) {
+  footer {
+    padding: 15px 50px;
+    display: inline-flex;
+  }
+  footer h1 {
+    width: 100%;
+  }
+  footer .services {
+    display: block;
+    flex: 0 0 100%;
+  }
+}

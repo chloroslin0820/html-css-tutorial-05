@@ -339,16 +339,16 @@ main .content .card {
 }
 main .content .card .left {
   flex: 0 0 30%;
-  padding: 20px;
+  padding: 5px 30px;
   background-color: #000;
   color: #fff;
 }
 main .content .card .left h1 {
-  font-size: 44px;
+  font-size: 40px;
   margin-bottom: 0;
 }
 main .content .card .left p {
-  font-size: 28px;
+  font-size: 20px;
 }
 main .content .card.right {
   flex: 0 0 70%;
